@@ -10,12 +10,22 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/baselibrary" />
+            <option value="$PROJECT_DIR$/codelibrary" />
+            <option value="$PROJECT_DIR$/networdlibrary" />
+            <option value="$PROJECT_DIR$/userlibrary" />
+            <option value="$PROJECT_DIR$/utilslibrary" />
           </set>
         </option>
         <option name="myModules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/baselibrary" />
+            <option value="$PROJECT_DIR$/codelibrary" />
+            <option value="$PROJECT_DIR$/networdlibrary" />
+            <option value="$PROJECT_DIR$/userlibrary" />
+            <option value="$PROJECT_DIR$/utilslibrary" />
           </set>
         </option>
       </GradleProjectSettings>
