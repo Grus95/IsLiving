@@ -12,7 +12,7 @@ import java.util.List;
 public class BaseApplication extends Application {
 
     private static BaseApplication app;
-    private List<Activity> activitys;
+    private List<Activity> activities;
 
 
     @Override
@@ -20,7 +20,7 @@ public class BaseApplication extends Application {
         super.onCreate();
         app = this;
 
-        activitys = new LinkedList<>();
+        activities = new LinkedList<>();
     }
 
 
@@ -30,22 +30,22 @@ public class BaseApplication extends Application {
 
 
     public void addActivity(Activity activity) {
-        if (null == activitys) activitys = new LinkedList<>();
-        activitys.add(activity);
+        if (null == activities) activities = new LinkedList<>();
+        activities.add(activity);
     }
 
     public void removeActivity(Activity activity) {
-        if (null != activitys && activitys.contains(activity)) {
-            activitys.remove(activity);
+        if (null != activities && activities.contains(activity)) {
+            activities.remove(activity);
         }
     }
 
     public void exitActivitys() {
-        if (null != activitys) {
-            for (Activity activity : activitys) {
+        if (null != activities) {
+            for (Activity activity : activities) {
                 activity.finish();
             }
-            activitys.clear();
+            activities.clear();
         }
     }
 }
