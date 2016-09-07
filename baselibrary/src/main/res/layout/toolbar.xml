@@ -104,8 +104,9 @@
             android:id="@+id/view_toolbar_divider_bottom"
             android:layout_width="match_parent"
             android:layout_height="1px"
+            android:visibility="gone"
             android:layout_alignParentBottom="true"
-            android:background="@color/diriver_first" />
+            android:background="@color/divide_line" />
 
     </RelativeLayout>
 
