@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.example.grus95.baselibrary.R;
@@ -233,6 +234,12 @@ public class OpenProjectRecyclerFragment extends RecyclerFragment<OpenProjectMod
             mTvContent.setText(item.getContent());
             mTvAuthor.setText(item.getAuthor());
 
+            mTvTitle.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(getActivity(), "鹤鹤同学", Toast.LENGTH_SHORT).show();
+                }
+            });
             mLlContentPanel.setBackgroundColor(Color.parseColor(item.getColor()));
         }
     }

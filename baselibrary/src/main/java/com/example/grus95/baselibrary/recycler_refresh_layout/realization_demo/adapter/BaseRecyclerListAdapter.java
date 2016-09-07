@@ -58,8 +58,7 @@ public abstract class BaseRecyclerListAdapter<T, VH extends RecyclerView.ViewHol
     notifyDataSetChanged();
   }
 
-  public
-  T getItem(int position) {
+  public T getItem(int position) {
     return mItemList.get(position);
   }
 
