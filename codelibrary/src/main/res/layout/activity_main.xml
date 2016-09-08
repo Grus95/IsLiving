@@ -26,4 +26,13 @@
         android:textColor="@color/tab_text_color"
         android:textSize="16sp" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:onClick="goToAnimationActivity"
+        android:text="button_animation_test"
+        android:textColor="@color/tab_text_color"
+        android:textSize="16sp" />
+
 </LinearLayout>

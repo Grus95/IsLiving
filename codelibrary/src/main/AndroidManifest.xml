@@ -4,7 +4,8 @@
 
     <!-- <activity android:name=".MainActivity"></activity> -->
     <application>
-        <activity android:name=".test_activity.RecycleLayoutActivity"></activity>
+        <activity android:name=".test_activity.RecycleLayoutActivity" />
+        <activity android:name=".test_activity.CircularAnimActivity"></activity>
     </application>
 
 </manifest>
