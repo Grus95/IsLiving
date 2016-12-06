@@ -5,7 +5,10 @@
     <!-- <activity android:name=".MainActivity"></activity> -->
     <application>
         <activity android:name=".test_activity.RecycleLayoutActivity" />
-        <activity android:name=".test_activity.CircularAnimActivity"></activity>
+        <activity android:name=".test_activity.CircularAnimActivity" />
+        <activity
+            android:name=".test_activity.TVShowActivity"
+            android:theme="@style/MyFullScreenTheme"></activity>
     </application>
 
 </manifest>

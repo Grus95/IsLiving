@@ -1,1 +1,1 @@
-include ':app', ':codelibrary', ':baselibrary', ':utilslibrary', ':userlibrary', ':networdlibrary', ':imagelibrary'
+include ':app', ':codelibrary', ':baselibrary', ':utilslibrary', ':userlibrary', ':networdlibrary', ':imagelibrary', ':thisvideoplayerlibrary'

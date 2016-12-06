@@ -15,8 +15,8 @@ public class OpenProjectRefreshActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_container);
 
-        getSupportFragmentManager().beginTransaction()
-                .replace(R.id.fragment_container, OpenProjectRecyclerFragment.newInstance())
-                .commit();
+//        getSupportFragmentManager().beginTransaction()
+//                .replace(R.id.fragment_container, OpenProjectRecyclerFragment.newInstance())
+//                .commit();
     }
 }

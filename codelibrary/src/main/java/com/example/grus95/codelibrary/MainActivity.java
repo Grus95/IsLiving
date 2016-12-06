@@ -5,10 +5,10 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.grus95.baselibrary.animation.circular_anim.CircularAnim;
-import com.example.grus95.baselibrary.recycler_refresh_layout.realization_demo.demo.OpenProjectRecyclerFragment;
 import com.example.grus95.baselibrary.ui.activity.BaseActivity;
 import com.example.grus95.codelibrary.test_activity.CircularAnimActivity;
 import com.example.grus95.codelibrary.test_activity.RecycleLayoutActivity;
+import com.example.grus95.codelibrary.test_activity.TVShowActivity;
 
 /**
  * Created by grus95 on 16/8/31
@@ -26,7 +26,7 @@ public class MainActivity extends BaseActivity {
     }
 
     @Override
-    protected int setContentView() {
+    protected Object setContentView() {
         return R.layout.activity_main;
     }
 
@@ -65,6 +65,16 @@ public class MainActivity extends BaseActivity {
                     @Override
                     public void onAnimationEnd() {
                         startActivity(new Intent(MainActivity.this, CircularAnimActivity.class));
+                    }
+                });
+    }
+
+    public void goToTVShowActivity(View view) {
+        CircularAnim.fullActivity(MainActivity.this, view)
+                .go(new CircularAnim.OnAnimationEndListener() {
+                    @Override
+                    public void onAnimationEnd() {
+                        startActivity(new Intent(MainActivity.this, TVShowActivity.class));
                     }
                 });
     }

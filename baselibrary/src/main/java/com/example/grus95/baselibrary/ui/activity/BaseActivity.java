@@ -71,11 +71,12 @@ public abstract class BaseActivity extends AppCompatActivity {
 
         initFirst();
 
-        int contentViewRes = setContentView();
-        if (contentViewRes > 0) {
-            setContentView(contentViewRes);
+        Object contentViewRes = setContentView();
+        if (contentViewRes instanceof Integer) {
+            setContentView((Integer) contentViewRes);
+        } else if (contentViewRes instanceof View) {
+            setContentView((View) contentViewRes);
         }
-
         init();
     }
 
@@ -100,7 +101,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     protected abstract void initFirst();
 
-    protected abstract int setContentView();
+    protected abstract Object setContentView();
 
     protected abstract void initView();
 

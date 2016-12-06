@@ -19,7 +19,7 @@ public class RecycleLayoutActivity extends BaseActivity {
     }
 
     @Override
-    protected int setContentView() {
+    protected Object setContentView() {
         return R.layout.activity_recycle_layout;
     }
 

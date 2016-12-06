@@ -35,4 +35,13 @@
         android:textColor="@color/tab_text_color"
         android:textSize="16sp" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:onClick="goToTVShowActivity"
+        android:text="电视直播"
+        android:textColor="@color/tab_text_color"
+        android:textSize="16sp" />
+
 </LinearLayout>
