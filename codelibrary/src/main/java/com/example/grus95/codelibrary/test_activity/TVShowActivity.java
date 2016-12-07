@@ -1,5 +1,6 @@
 package com.example.grus95.codelibrary.test_activity;
 
+import android.content.res.Configuration;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
@@ -78,6 +79,38 @@ public class TVShowActivity extends BaseActivity {
     }
 
     @Override
+    protected void onPause() {
+        super.onPause();
+        if (player != null) {
+            player.onPause();
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (player != null) {
+            player.onResume();
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (player != null) {
+            player.onDestroy();
+        }
+        super.onDestroy();
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        if (player != null) {
+            player.onConfigurationChanged(newConfig);
+        }
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
             onBackPressed();
@@ -88,6 +121,9 @@ public class TVShowActivity extends BaseActivity {
 
     @Override
     public void onBackPressed() {
+        if (player != null && player.onBackPressed()) {
+            return;
+        }
         super.onBackPressed();
         // 添加返回过渡动画.
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
