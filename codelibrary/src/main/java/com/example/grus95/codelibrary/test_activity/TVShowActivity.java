@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
 import com.example.grus95.baselibrary.ui.activity.BaseActivity;
 import com.example.grus95.codelibrary.R;
 import com.grus95.thisvideoplayerlibrary.listener.OnPlayerBackListener;
@@ -18,7 +17,8 @@ public class TVShowActivity extends BaseActivity {
 
     private PlayerView player;
     private View rootView;
-    private String videoUrl = "rtmp://live.hkstv.hk.lxdns.com/live/hks";
+    private String videoTitle;
+    private String videoUrl;
 
     @Override
     protected void initFirst() {
@@ -42,7 +42,8 @@ public class TVShowActivity extends BaseActivity {
 
     @Override
     protected void initData() {
-
+        videoTitle = getIntent().getStringExtra("TVTitle");
+        videoUrl = getIntent().getStringExtra("TVUrl");
     }
 
     @Override
@@ -53,7 +54,7 @@ public class TVShowActivity extends BaseActivity {
     @Override
     protected void initOther() {
         player = new PlayerView(this, rootView)
-                .setTitle("凤凰卫视装逼专属")
+                .setTitle(videoTitle)
                 .setScaleType(PlayStateParams.fitparent)
                 .forbidTouch(false)
                 .hideMenu(true)
