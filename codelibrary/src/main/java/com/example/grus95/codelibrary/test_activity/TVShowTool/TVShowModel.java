@@ -49,6 +49,11 @@ public class TVShowModel implements CursorModel {
 
     @Override
     public boolean hasMore() {
-        return !TextUtils.isEmpty(mCursor);
+        return false;
     }
+
+//    @Override
+//    public boolean hasMore() {
+//        return !TextUtils.isEmpty(mCursor);
+//    }
 }
